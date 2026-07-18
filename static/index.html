@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Analytics</title>
+    <meta name="description" content="A premium data analysis dashboard powered by Pandas and Flask.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="dashboard-container">
+        <header class="glass-header">
+            <h1>Student Performance Analytics</h1>
+            <p>Educational Data Insights</p>
+        </header>
+
+        <main id="main-content" class="loading">
+            <div class="loader-container">
+                <div class="spinner"></div>
+                <p>Crunching the data...</p>
+            </div>
+
+            <div class="dashboard-grid hidden" id="dashboard-content">
+                <section class="metrics-section">
+                    <div class="metric-card glass-panel">
+                        <h3>Avg Maths</h3>
+                        <p class="metric-value" id="avg-maths">--</p>
+                    </div>
+                    <div class="metric-card glass-panel">
+                        <h3>Avg Science</h3>
+                        <p class="metric-value" id="avg-science">--</p>
+                    </div>
+                    <div class="metric-card glass-panel">
+                        <h3>Avg English</h3>
+                        <p class="metric-value" id="avg-english">--</p>
+                    </div>
+                </section>
+
+                <section class="charts-section glass-panel">
+                    <h2>Analysis Visualizations</h2>
+                    <div class="chart-container">
+                        <img id="analysis-plot" src="" alt="Data Analysis Plots" />
+                    </div>
+                </section>
+
+                <section class="data-table-section glass-panel">
+                    <h2>Student Records (Raw Data)</h2>
+                    <div class="table-responsive">
+                        <table class="data-table" id="student-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Maths</th>
+                                    <th>Science</th>
+                                    <th>English</th>
+                                    <th>Attendance %</th>
+                                    <th>Study Hrs</th>
+                                    <th>Grade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data will be populated here by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer class="glass-footer">
+            <p>&copy; 2026 Nexus Data. Powered by Flask, Pandas, and Matplotlib.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
